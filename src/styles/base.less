@@ -1,0 +1,84 @@
+body {
+    font-family: sans-serif;
+}
+
+h1 {
+    font-size: 16px;
+}
+
+h2 {
+    font-size: 14px;
+}
+
+h3 {
+    font-size: 12px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.body_disable {
+    padding-right: 15px;
+    overflow: hidden;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
+input::-webkit-input-placeholder {
+    font-size: 13px;
+    color: #8e98a3;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+.clear:after {
+    content: ".";
+    clear: both;
+    visibility: visible;
+    display: block;
+    height: 0;
+    font-size: 0;
+}
+
+@keyframes rotating {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(1turn);
+    }
+}
+
+@keyframes load {
+    0% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    100% {
+        opacity: .2;
+        transform: scale(.8);
+    }
+}
