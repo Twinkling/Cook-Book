@@ -3,7 +3,7 @@ node_js: "8"
 script: 
   - npm run build
 deploy:
-  provider: github_pages
+  provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
   keep_history: true
