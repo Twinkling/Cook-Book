@@ -1,0 +1,131 @@
+.sy-ui {
+    --ui-main-color: #1cf;
+    --ui-second-color: #c2c2c2;
+    --ui-assist-color: #fff;
+    --ui-radius: 2px;
+    --ui-bg-color: var(--ui-second-color);
+    --ui-bd-color: var(--ui-second-color);
+}
+.sy-tool-tip {
+    position: relative;
+    &::before {
+        content: attr(aria-label);
+        position: absolute;
+        padding: 3px 5px;
+        border: 1px solid var(--ui-main-color);
+        border-radius: var(--ui-radius);
+        pointer-events: none;
+
+        background-color: #fff;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        border: 5px solid transparent;
+        pointer-events: none;
+    }
+    &.sy-top,
+    &.sy-bottom {
+        &::before,
+        &::after {
+            opacity: 0;
+            transition: all .2s linear;
+        }
+        &::before {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        &::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        &:hover::before,
+        &:hover::after {
+            opacity: 1;
+        }
+    }
+    &.sy-top {
+        &::before,
+        &::after {
+            bottom: 100%;
+        }
+        &::after {
+            border-bottom-width: 0;
+            border-top-color: var(--ui-main-color);
+        }
+        &:hover::before {
+            bottom: calc(100% + 10px);
+        }
+        &:hover::after {
+            bottom: calc(100% + 5px);
+        }
+    }
+    &.sy-bottom {   
+        &::before,
+        &::after {
+            top: 100%;
+        }     
+        &::after {
+            border-top-width: 0;
+            border-bottom-color: var(--ui-main-color);
+        }
+        &:hover::before {
+            top: calc(100% + 10px);
+        }
+        &:hover::after {
+            top: calc(100% + 5px);
+        }
+    }
+    &.sy-right,
+    &.sy-left {
+        &::before {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        &::before,
+        &::after {
+            opacity: 0;
+            transition: all .2s linear;
+        }
+        &::after {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        &:hover::before,
+        &:hover::after {
+            opacity: 1;
+        }
+    }
+    &.sy-right {   
+        &::before,
+        &::after {
+            left: 100%;
+        }     
+        &::after {
+            border-left-width: 0;
+            border-right-color: var(--ui-main-color);
+        }
+        &:hover::before {
+            left: calc(100% + 10px);
+        }
+        &:hover::after {
+            left: calc(100% + 5px);
+        }
+    }
+    &.sy-left {   
+        &::before,
+        &::after {
+            right: 100%;
+        }     
+        &::after {
+            border-right-width: 0;
+            border-left-color: var(--ui-main-color);
+        }
+        &:hover::before {
+            right: calc(100% + 10px);
+        }
+        &:hover::after {
+            right: calc(100% + 5px);
+        }
+    }
+}

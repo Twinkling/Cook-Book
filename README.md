@@ -1,4 +1,4 @@
-# Cook-Book
+# Cook-Book [![Build Status](https://travis-ci.org/Twinkling/Cook-Book.svg?branch=master)](https://travis-ci.org/Twinkling/Cook-Book)
 
 ## Project setup
 ```

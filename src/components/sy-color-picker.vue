@@ -1,0 +1,15 @@
+<template>
+    <div class="color-picker">
+        拾色器
+    </div>
+</template>
+
+<script>
+export default {
+    name: 'SYColorPicker',
+};
+</script>
+
+<style>
+
+</style>
